@@ -1,0 +1,19 @@
+# node_modules
+# .env
+# uploads
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Uploaded temporary files
+backend/uploads/
+
+# Build files
+frontend/dist/
+
+# Logs
+*.log
