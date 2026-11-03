@@ -9,8 +9,7 @@ node_modules/
 .env
 .env.*
 
-# Uploaded temporary files
-backend/uploads/
+
 
 # Build files
 frontend/dist/
