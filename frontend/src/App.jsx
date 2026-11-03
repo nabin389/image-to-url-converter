@@ -50,6 +50,7 @@ function App() {
       );
 
       const data = await response.json();
+      console.log("This is data: ", data);
 
       if (!response.ok) {
         throw new Error(data.message || "Image upload failed");
