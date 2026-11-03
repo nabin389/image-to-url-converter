@@ -1,7 +1,9 @@
 
 import { useState } from "react";
+import API from "./config/api";
 
 function App() {
+  console.log( `${API}/api/images/upload`)
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -39,7 +41,8 @@ function App() {
       formData.append("image", image);
 
       const response = await fetch(
-        "http://localhost:3000/api/images/upload",
+        // "http://localhost:3000/api/images/upload",
+        `${API}/api/images/upload`,
         {
           method: "POST",
           body: formData,

@@ -7,8 +7,16 @@ const imageRoutes = require("./routes/imageRoutes");
 
 const app = express();
 
-app.use(cors());
 app.use(express.json());
+
+const allowedOrigins = [
+  "https://image-to-url-converter.vercel.app",
+  "http://localhost:5173"
+];
+
+app.use(cors({
+  origin: allowedOrigins
+}));
 
 app.use("/api/images", imageRoutes);
 
